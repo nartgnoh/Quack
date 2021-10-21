@@ -8,32 +8,80 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
     private Rigidbody2D rigidbody;
-    private Vector2 moveDirection;
+
+    private Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-         rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        ProcessInputs();
-        Move();
+        Vector2 moveDirection = GetMoveDirection();
+        bool isBouncing = IsBouncing();
+        bool isSwimming = IsSwimming();
+
+        Move(moveDirection);
+        Animate(moveDirection, isBouncing, isSwimming);
+
+
     }
 
-    void ProcessInputs()
+    Vector2 GetMoveDirection()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        return new Vector2(moveX, moveY).normalized;
     }
 
-    void Move()
+    void Move(Vector2 moveDirection)
     {
         rigidbody.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    void Animate(Vector2 moveDirection, bool isBouncing, bool isSwimming)
+    {
+        if (moveDirection.magnitude > 0)
+        {
+            animator.SetBool("isWaddling", true);
+        } else
+        {
+            animator.SetBool("isWaddling", false);
+        }
+
+        animator.SetBool("isBouncing", isBouncing);
+
+        animator.SetBool("isSwimming", isSwimming);
+    }
+
+    bool IsBouncing()
+    {
+        return Input.GetKey("space");
+    }
+
+    bool IsSwimming()
+    {
+        Ray ray = new Ray(transform.position, Vector3.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.gameObject.tag == "Water")
+            {
+                return true;
+            } else {
+                return false;
+            }
+        } else
+        {
+            return false;
+        }
     }
 }
