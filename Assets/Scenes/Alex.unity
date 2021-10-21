@@ -4522,7 +4522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0637e158214a5d243b6533fe00338f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 10
 --- !u!95 &2071412501
 Animator:
   serializedVersion: 3

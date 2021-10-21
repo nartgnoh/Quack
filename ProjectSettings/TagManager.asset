@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Duckling
   - Background
+  - Water
   layers:
   - Default
   - TransparentFX
