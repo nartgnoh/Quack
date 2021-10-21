@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 561871384}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -977,8 +977,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561871383}
   m_LocalRotation: {x: -0.70710665, y: -0, z: -0, w: 0.70710695}
-  m_LocalPosition: {x: 0.44, y: 2.47, z: 1.05}
-  m_LocalScale: {x: 0.22593, y: 1, z: 0.20952703}
+  m_LocalPosition: {x: 0.541, y: 2.578, z: 1.05}
+  m_LocalScale: {x: 0.13682057, y: 1, z: 0.16153474}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -4357,6 +4357,7 @@ GameObject:
   - component: {fileID: 2071412499}
   - component: {fileID: 2071412500}
   - component: {fileID: 2071412501}
+  - component: {fileID: 2071412502}
   m_Layer: 0
   m_Name: LittleBirdie
   m_TagString: Player
@@ -4437,7 +4438,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071412495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4542,3 +4543,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2071412502
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071412495}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.004100785, y: -0.04575065}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.189289, y: 0.2284987}
+  m_EdgeRadius: 0
