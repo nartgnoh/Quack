@@ -18,7 +18,7 @@ public class PlayerMovement : DuckMovement
         bool isSwimming = IsSwimming();
 
         Move(moveDirection);
-        Animate(moveDirection, isBouncing, isSwimming)
+        Animate(moveDirection, isBouncing, isSwimming);
     }
 
     Vector2 GetMoveDirection()
