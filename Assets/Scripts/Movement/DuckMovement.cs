@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DuckMovement : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 5;
 
     public Rigidbody2D rigidbody;
     public Animator animator;
