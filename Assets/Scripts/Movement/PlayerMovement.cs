@@ -28,4 +28,9 @@ public class PlayerMovement : DuckMovement
 
         return new Vector2(moveX, moveY).normalized;
     }
+
+    public override bool IsBouncing()
+    {
+        return Input.GetKey("space");
+    }
 }

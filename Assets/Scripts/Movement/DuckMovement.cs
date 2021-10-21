@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DuckMovement : MonoBehaviour
+public abstract class DuckMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
 
@@ -45,10 +45,7 @@ public class DuckMovement : MonoBehaviour
         animator.SetBool("isSwimming", isSwimming);
     }
 
-    public bool IsBouncing()
-    {
-        return Input.GetKey("space");
-    }
+    public abstract bool IsBouncing();
 
     public bool IsSwimming()
     {
