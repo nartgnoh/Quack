@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DucklingFollow : DuckMovement
 {
-    public float speed;
+    public float followSpeed;
     public bool follow = false;
     public GameObject duckling;
 
@@ -40,7 +40,7 @@ public class DucklingFollow : DuckMovement
         {
             //follow the player
             if(Vector2.Distance(transform.position, target.position) > distance){
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
             }
         }
     }
@@ -49,16 +49,18 @@ public class DucklingFollow : DuckMovement
     {
         if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling")
         {
-            duckling.gameObject.tag = "Player";
-            // duckling.GetComponent<BoxCollider2D>().enabled = false;
+            duckling.gameObject.tag = "IncludedDuckling";
 
             duckCount = PlayerPrefs.GetFloat("duckCount");
-            Debug.Log("duckCount: " + duckCount);
             PlayerPrefs.SetFloat("duckCount", duckCount+0.75f);
             distance = PlayerPrefs.GetFloat("duckCount");
-            Debug.Log("distance: " + duckCount);
 
             follow = true;
         }
+    }
+
+    public override bool IsBouncing()
+    {
+        return Input.GetKey("space");
     }
 }
