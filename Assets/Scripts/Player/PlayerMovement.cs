@@ -51,6 +51,14 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection.magnitude > 0)
         {
             animator.SetBool("isWaddling", true);
+
+            if (moveDirection.x < 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            } else
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
         } else
         {
             animator.SetBool("isWaddling", false);
