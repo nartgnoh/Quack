@@ -40,7 +40,7 @@ public abstract class DuckMovement : MonoBehaviour
             animator.SetBool("isWaddling", false);
         }
 
-        animator.SetBool("isBouncing", isBouncing);
+        animator.SetBool("isBouncing", isBouncing && !isSwimming);
 
         animator.SetBool("isSwimming", isSwimming);
     }
