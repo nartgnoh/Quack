@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Duckling
-  - Background
   - Water
+  - Background
+  - Duckling
   - IncludedDuckling
   layers:
   - Default
@@ -15,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Objects
-  - Backgrounds
+  - 
+  - 
   - 
   - 
   - 
