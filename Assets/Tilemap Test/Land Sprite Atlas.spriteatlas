@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Land Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -5023257353908796357, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -2107955834846327374, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -5991181189207417973, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 5995037793355272831, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 6514397522294380945, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 6892132154258291160, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -1629701373340171850, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -7656089883285519422, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 1301121387719302791, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 2853948129991499661, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -1289491739526602436, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 9128699062895045166, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 5882408185683326576, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -2083201322625240679, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 7243304705480085642, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 124331726193865204, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -5004380301703674066, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -8470126411702252832, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 7833319157763913776, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -29158278245733969, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -1687977278839720329, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 3620527946777131515, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 8597396582744781357, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -8661861305312510561, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -7974898768021659811, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 2266589808601075956, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 4357322973637126840, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -2166470307948916407, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 9106571448469011451, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 4802226788698951556, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 5904010585042617601, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: 8618408936486646635, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  - {fileID: -2834380993558868639, guid: 4fac3d63770f1ba4e8a690eefcace371, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - land_21
+  - land_20
+  - land_23
+  - land_22
+  - land_25
+  - land_24
+  - land_27
+  - land_26
+  - land_29
+  - land_28
+  - land_9
+  - land_8
+  - land_1
+  - land_0
+  - land_3
+  - land_2
+  - land_5
+  - land_4
+  - land_7
+  - land_6
+  - land_18
+  - land_19
+  - land_10
+  - land_11
+  - land_12
+  - land_13
+  - land_14
+  - land_15
+  - land_16
+  - land_17
+  - land_32
+  - land_30
+  - land_31
+  m_RenderDataMap: {}
+  m_Tag: Land Sprite Atlas
+  m_IsVariant: 0
