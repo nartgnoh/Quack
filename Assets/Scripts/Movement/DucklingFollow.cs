@@ -50,6 +50,7 @@ public class DucklingFollow : DuckMovement
         if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling")
         {
             duckling.gameObject.tag = "IncludedDuckling";
+            duckling.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             duckCount = PlayerPrefs.GetFloat("duckCount");
             PlayerPrefs.SetFloat("duckCount", duckCount+0.75f);
