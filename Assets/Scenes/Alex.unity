@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 457385927}
   - component: {fileID: 457385926}
   - component: {fileID: 457385928}
+  - component: {fileID: 457385929}
   m_Layer: 0
   m_Name: TilemapElevated
   m_TagString: Untagged
@@ -816,7 +817,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457385924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -886,6 +887,51 @@ PolygonCollider2D:
       - {x: -4.0294952, y: 0.70237434}
       - {x: -4.442466, y: 1.0373049}
       - {x: -4.8343086, y: 1.3246775}
+--- !u!68 &457385929
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457385924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -6.731654, y: 1.4337268}
+  - {x: -5.98256, y: 1.4261591}
+  - {x: -5.9353228, y: 1.4376808}
+  - {x: -5.4429975, y: 1.5503083}
+  - {x: -4.7244263, y: 1.1868498}
+  - {x: -3.6576989, y: 0.015692651}
+  - {x: -3.3367503, y: -1.6636808}
+  - {x: -3.3730948, y: -1.7972792}
+  - {x: -3.4614477, y: -3.0072596}
+  - {x: -3.9604588, y: -3.9987388}
+  - {x: -4.031589, y: -4.714193}
+  - {x: -5.2100077, y: -4.8055577}
+  - {x: -5.903637, y: -4.880598}
+  - {x: -6.886824, y: -4.8924856}
+  - {x: -7.6708584, y: -4.883041}
+  - {x: -8.379603, y: -4.268474}
+  - {x: -8.607587, y: -3.4224553}
+  - {x: -8.48987, y: -2.131212}
+  - {x: -8.495837, y: -1.2724459}
+  - {x: -8.448056, y: -0.40490428}
+  - {x: -8.390446, y: 0.085180104}
+  - {x: -8.078034, y: 0.33888286}
+  - {x: -7.6910067, y: 0.8248551}
+  - {x: -7.2293296, y: 1.2475727}
+  - {x: -6.731647, y: 1.4337432}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &561871383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071412495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0.84, y: -0.74, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 717110461}
@@ -4419,7 +4465,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3075306020502045439, guid: 8de5070f96a05414bbbe35e486622c6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4524,6 +4570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  rigidbody: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!95 &2071412501
 Animator:
   serializedVersion: 3
