@@ -21,13 +21,14 @@ public class DucklingFollow : DuckMovement
     void FixedUpdate()
     {
         Vector2 moveDirection = GetMoveDirection();
-        bool isBouncing = IsBouncing();
+        bool isBouncing = follow && IsBouncing();
         bool isSwimming = IsSwimming();
 
         Animate(moveDirection, isBouncing, isSwimming);
     }
 
-    Vector2 GetMoveDirection(){
+    Vector2 GetMoveDirection()
+    {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -36,27 +37,25 @@ public class DucklingFollow : DuckMovement
 
     void Update()
     {
-        if(follow)
+
+        if (follow)
         {
             //follow the player
-            if(Vector2.Distance(transform.position, target.position) > distance){
+            if (Vector2.Distance(transform.position, target.position) > distance)
+            {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
             }
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void Follow()
     {
-        if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling")
-        {
-            duckling.gameObject.tag = "IncludedDuckling";
-
-            duckCount = PlayerPrefs.GetFloat("duckCount");
-            PlayerPrefs.SetFloat("duckCount", duckCount+0.75f);
-            distance = PlayerPrefs.GetFloat("duckCount");
-
-            follow = true;
-        }
+        follow = true;
+        duckling.gameObject.tag = "IncludedDuckling";
+        duckCount = PlayerPrefs.GetFloat("duckCount");
+        PlayerPrefs.SetFloat("duckCount", duckCount + 0.75f);
+        distance = PlayerPrefs.GetFloat("duckCount");
+        animator.Play("Base Layer.DucklingBounce", 0, 1f);
     }
 
     public override bool IsBouncing()
