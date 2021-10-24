@@ -14999,6 +14999,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Light
       objectReference: {fileID: 0}
+    - target: {fileID: 6299084703748455946, guid: a32219a341493db4f8a8ab54ec5c9262, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299084703748455946, guid: a32219a341493db4f8a8ab54ec5c9262, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: 1335531623
+      objectReference: {fileID: 0}
     - target: {fileID: 6299084703748455947, guid: a32219a341493db4f8a8ab54ec5c9262, type: 3}
       propertyPath: m_RootOrder
       value: 2

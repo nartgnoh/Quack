@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerMovement : DuckMovement
 {
     public float quackRadius;
+    public GameObject quackSound;
+
+    private AudioSource audio;
 
     void Start()
     {
@@ -42,9 +45,14 @@ public class PlayerMovement : DuckMovement
 
     void Quack(bool isBouncing)
     {
-        if (!isBouncing)
-        {
+        if (!isBouncing) {
+            audio = quackSound.gameObject.GetComponent<AudioSource>();
+            Destroy(GameObject.Find("QuackSound(Clone)"), audio.clip.length);
             return;
+        }
+
+        if (!GameObject.Find("QuackSound(Clone)")){
+            Instantiate(quackSound, transform.position, Quaternion.identity);
         }
 
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, quackRadius);

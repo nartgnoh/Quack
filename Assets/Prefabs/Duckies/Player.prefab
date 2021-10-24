@@ -126,6 +126,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   isBouncing: 0
   quackRadius: 1
+  quackSound: {fileID: 2705388408840109933, guid: e6db1f9d7e4ccb24f913201edf386969, type: 3}
 --- !u!95 &8438852452099138576
 Animator:
   serializedVersion: 3

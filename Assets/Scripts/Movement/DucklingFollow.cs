@@ -7,6 +7,8 @@ public class DucklingFollow : DuckMovement
     public float followSpeed;
     public bool follow = false;
     public GameObject duckling;
+    public float soundRadius = 10f;
+    public GameObject chirpSound;
 
     private Transform target;
     private float duckCount;
@@ -38,8 +40,24 @@ public class DucklingFollow : DuckMovement
 
     void Update()
     {
-        // GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
-        Debug.Log(Mathf.RoundToInt(transform.position.y * 100f) * -1);
+        //Chirp Sound
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, soundRadius);
+        foreach (Collider2D collider in hitColliders)
+        {
+            if (collider.tag == "Player") {
+                if (!GameObject.Find("ChirpSound(Clone)")){
+                    Instantiate(chirpSound, transform.position, Quaternion.identity);
+                }
+            }
+            else {
+                Destroy(GameObject.Find("ChirpSound(Clone)"));
+            }
+        }
+
+        //Duckies Sorting Layer
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        //Get dropRadius
+        dropRadius = PlayerPrefs.GetFloat("dropRadius");
         if(follow) {
             if(Vector2.Distance(transform.position, target.position) > dropRadius) {
                 duckling.gameObject.tag = "Duckling";
@@ -63,14 +81,16 @@ public class DucklingFollow : DuckMovement
         duckling.gameObject.tag = "IncludedDuckling";
         //disable boxCollider on duckling
         duckling.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        //disable chirp sound
+        Destroy(GameObject.Find("ChirpSound(Clone)"));
 
         //get and update duckling count
         duckCount = PlayerPrefs.GetFloat("duckCount");
         PlayerPrefs.SetFloat("duckCount", duckCount+1);
         //set followDistance
         followDistance = PlayerPrefs.GetFloat("duckCount")*0.75f;
-        //set dropRadius
-        dropRadius = followDistance + 2;
+        //get and update drop radius
+        PlayerPrefs.SetFloat("dropRadius", followDistance + 2);
         
         animator.Play("Base Layer.DucklingBounce", 0, 1f);
         follow = true;

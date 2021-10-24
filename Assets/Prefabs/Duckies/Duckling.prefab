@@ -172,3 +172,5 @@ MonoBehaviour:
   followSpeed: 4
   follow: 0
   duckling: {fileID: 4718219773097069122}
+  soundRadius: 2
+  chirpSound: {fileID: 8537855331418365528, guid: 554cb633a2a3fdb41b4a252720fc7f10, type: 3}
