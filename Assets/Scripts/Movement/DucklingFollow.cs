@@ -22,13 +22,14 @@ public class DucklingFollow : DuckMovement
     void FixedUpdate()
     {
         Vector2 moveDirection = GetMoveDirection();
-        bool isBouncing = IsBouncing();
+        bool isBouncing = follow && IsBouncing();
         bool isSwimming = IsSwimming();
 
         Animate(moveDirection, isBouncing, isSwimming);
     }
 
-    Vector2 GetMoveDirection(){
+    Vector2 GetMoveDirection()
+    {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -54,24 +55,23 @@ public class DucklingFollow : DuckMovement
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void Follow()
     {
-        if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling") {
-            //change duckling tag to "IncludedDuckling"
-            duckling.gameObject.tag = "IncludedDuckling";
-            //disable boxCollider on duckling
-            duckling.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        //change duckling tag to "IncludedDuckling"
+        duckling.gameObject.tag = "IncludedDuckling";
+        //disable boxCollider on duckling
+        duckling.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-            //get and update duckling count
-            duckCount = PlayerPrefs.GetFloat("duckCount");
-            PlayerPrefs.SetFloat("duckCount", duckCount+1);
-            //set followDistance
-            followDistance = PlayerPrefs.GetFloat("duckCount")*0.75f;
-            //set dropRadius
-            dropRadius = followDistance + 2;
-
-            follow = true;
-        }
+        //get and update duckling count
+        duckCount = PlayerPrefs.GetFloat("duckCount");
+        PlayerPrefs.SetFloat("duckCount", duckCount+1);
+        //set followDistance
+        followDistance = PlayerPrefs.GetFloat("duckCount")*0.75f;
+        //set dropRadius
+        dropRadius = followDistance + 2;
+        
+        animator.Play("Base Layer.DucklingBounce", 0, 1f);
+        follow = true;
     }
 
     public override bool IsBouncing()

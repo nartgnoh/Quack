@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : DuckMovement
 {
-    // Start is called before the first frame update
+    public float quackRadius;
+
     void Start()
     {
         SuperStart();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 moveDirection = GetMoveDirection();
@@ -18,6 +18,7 @@ public class PlayerMovement : DuckMovement
         bool isSwimming = IsSwimming();
 
         Move(moveDirection);
+        Quack(isBouncing);
         Animate(moveDirection, isBouncing, isSwimming);
     }
 
@@ -32,5 +33,23 @@ public class PlayerMovement : DuckMovement
     public override bool IsBouncing()
     {
         return Input.GetKey("space");
+    }
+
+    void Quack(bool isBouncing)
+    {
+        if (!isBouncing)
+        {
+            return;
+        }
+
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, quackRadius);
+
+        foreach (Collider2D collider in hitColliders)
+        {
+            if (collider.tag == "Duckling")
+            {
+                collider.GetComponent<DucklingFollow>().Follow();
+            }
+        }
     }
 }
