@@ -201,12 +201,12 @@ Transform:
   - {fileID: 1113504794}
   - {fileID: 471667323}
   - {fileID: 1897509452}
-  - {fileID: 1090781669}
   - {fileID: 1628241389}
   - {fileID: 128145275}
   - {fileID: 957090774}
   - {fileID: 1787065192}
   - {fileID: 1056352192}
+  - {fileID: 1090781669}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -328,7 +328,7 @@ Transform:
   m_LocalScale: {x: 1.2361279, y: 1, z: 0.2890006}
   m_Children: []
   m_Father: {fileID: 58211199}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &128145276
 MeshCollider:
@@ -1377,8 +1377,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1589788363
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.16666669, y: 0.16666669, z: 0}
@@ -12808,7 +12808,7 @@ Transform:
   m_LocalScale: {x: 1.2361279, y: 1, z: 0.2532086}
   m_Children: []
   m_Father: {fileID: 58211199}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &957090775
 MeshCollider:
@@ -12994,7 +12994,7 @@ Transform:
   m_LocalScale: {x: 0.2495433, y: 1, z: 0.9813859}
   m_Children: []
   m_Father: {fileID: 58211199}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &1056352193
 MeshCollider:
@@ -13228,7 +13228,7 @@ Transform:
   - {fileID: 1682617196}
   - {fileID: 1959688342}
   m_Father: {fileID: 58211199}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1113504793
 GameObject:
@@ -13300,9 +13300,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingLayerID: -551627207
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -34935,7 +34935,7 @@ Transform:
   m_LocalScale: {x: 0.5286834, y: 1, z: 0.2893912}
   m_Children: []
   m_Father: {fileID: 58211199}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &1628241390
 MeshCollider:
@@ -35101,9 +35101,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -551627207
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.16666669, y: 0.16666669, z: 0}
   m_MaxChunkCount: 16
@@ -38004,7 +38004,7 @@ Transform:
   m_LocalScale: {x: 0.2495433, y: 1, z: 0.9813859}
   m_Children: []
   m_Father: {fileID: 58211199}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &1787065193
 MeshCollider:
