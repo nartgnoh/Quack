@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Duck
   - 
   - 
   - 
@@ -42,12 +42,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Ducks
+    uniqueID: 3016074893
+    locked: 0
+  - name: Water
+    uniqueID: 986982755
     locked: 0
   - name: Background
     uniqueID: 3743340089
     locked: 0
   - name: Elevated
     uniqueID: 2705178933
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
