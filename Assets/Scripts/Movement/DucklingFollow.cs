@@ -10,7 +10,7 @@ public class DucklingFollow : DuckMovement
 
     private Transform target;
     private float duckCount;
-    private float distance;
+    private float followDistance;
 
     void Start()
     {
@@ -36,10 +36,9 @@ public class DucklingFollow : DuckMovement
 
     void Update()
     {
-        if(follow)
-        {
+        if(follow) {
             //follow the player
-            if(Vector2.Distance(transform.position, target.position) > distance){
+            if(Vector2.Distance(transform.position, target.position) > followDistance) {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
             }
         }
@@ -47,14 +46,13 @@ public class DucklingFollow : DuckMovement
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling")
-        {
+        if (collision.gameObject.tag == "Player" && duckling.gameObject.tag == "Duckling") {
             duckling.gameObject.tag = "IncludedDuckling";
             duckling.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             duckCount = PlayerPrefs.GetFloat("duckCount");
             PlayerPrefs.SetFloat("duckCount", duckCount+0.75f);
-            distance = PlayerPrefs.GetFloat("duckCount");
+            followDistance = PlayerPrefs.GetFloat("duckCount");
 
             follow = true;
         }
