@@ -51,6 +51,9 @@ TagManager:
   - name: Background
     uniqueID: 3743340089
     locked: 0
+  - name: EnvironmentDecorations
+    uniqueID: 2763255503
+    locked: 0
   - name: Elevated
     uniqueID: 2705178933
     locked: 0
