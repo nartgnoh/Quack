@@ -38,6 +38,8 @@ public class DucklingFollow : DuckMovement
 
     void Update()
     {
+        // GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        Debug.Log(Mathf.RoundToInt(transform.position.y * 100f) * -1);
         if(follow) {
             if(Vector2.Distance(transform.position, target.position) > dropRadius) {
                 duckling.gameObject.tag = "Duckling";

@@ -11,6 +11,11 @@ public class PlayerMovement : DuckMovement
         SuperStart();
     }
 
+    void Update()
+    {
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+    }
+
     void FixedUpdate()
     {
         Vector2 moveDirection = GetMoveDirection();
