@@ -32637,14 +32637,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1837503170, guid: 16464301e39268845ae268a842f4184a, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1837503170, guid: 16464301e39268845ae268a842f4184a, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[6]
-      value: 1335531623
-      objectReference: {fileID: 0}
     - target: {fileID: 843895409951048145, guid: 16464301e39268845ae268a842f4184a, type: 3}
       propertyPath: eastBoundary
       value: 
