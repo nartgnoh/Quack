@@ -13,6 +13,8 @@ public class SetInitial : MonoBehaviour
         //Set duckCount = 0 at start
         PlayerPrefs.SetFloat("duckCount", 0);
         //Set dropRadius = 0 at start
-        PlayerPrefs.SetFloat("dropRadius", 0);
+        PlayerPrefs.SetFloat("dropRadius", 0);  
+        //Set sceneTransition = 0 at start
+        PlayerPrefs.SetInt("sceneTransition", 0); 
     }
 }
