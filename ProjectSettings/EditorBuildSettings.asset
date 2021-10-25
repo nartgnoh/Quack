@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/Intro.unity
     guid: 0a29b3f20431c944d8320d5cf9ca6aba
-  - enabled: 1
-    path: Assets/Scenes/Hong-3.unity
-    guid: 745f9be4ec7ae2d409adc799ad8cce2e
   m_configObjects: {}
