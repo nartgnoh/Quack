@@ -8,17 +8,20 @@ public class DucklingFollow : DuckMovement
     public bool follow = false;
     public GameObject duckling;
     public float soundRadius = 10f;
-    public GameObject chirpSound;
+    public GameObject cryingSound;
 
     private Transform target;
     private float duckCount;
     private float followDistance;
     private float dropRadius;
+    private AudioSource chirpSound;
+    private AudioSource audio;
 
     void Start()
     {
         SuperStart();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        chirpSound = duckling.gameObject.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -40,35 +43,32 @@ public class DucklingFollow : DuckMovement
 
     void Update()
     {
-        //Chirp Sound
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, soundRadius);
-        foreach (Collider2D collider in hitColliders)
-        {
-            if (collider.tag == "Player") {
-                if (!GameObject.Find("ChirpSound(Clone)")){
-                    Instantiate(chirpSound, transform.position, Quaternion.identity);
-                }
-            }
-            else {
-                Destroy(GameObject.Find("ChirpSound(Clone)"));
-            }
-        }
-
         //Duckies Sorting Layer
         GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
         //Get dropRadius
         dropRadius = PlayerPrefs.GetFloat("dropRadius");
         if(follow) {
             if(Vector2.Distance(transform.position, target.position) > dropRadius) {
+                //drop duckling
                 duckling.gameObject.tag = "Duckling";
                 duckling.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
                 //get and update duckling count
                 duckCount = PlayerPrefs.GetFloat("duckCount");
                 PlayerPrefs.SetFloat("duckCount", duckCount-1);
+                //sounds
+                if (!GameObject.Find("CryingSound(Clone)")){
+                    Instantiate(cryingSound, transform.position, Quaternion.identity);
+                    audio = cryingSound.gameObject.GetComponent<AudioSource>();
+                    Destroy(GameObject.Find("CryingSound(Clone)"), audio.clip.length);
+                }
+                chirpSound.Play();
+
                 follow = false;
             }          
             else if(Vector2.Distance(transform.position, target.position) > followDistance) {
                 //follow the player
+                chirpSound.Stop();
                 transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
             }
         }

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 8438852452099138576}
   - component: {fileID: 8438852452099138577}
   - component: {fileID: 6575011495836166957}
+  - component: {fileID: 6365277862065655929}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0637e158214a5d243b6533fe00338f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   rigidbody: {fileID: 0}
   animator: {fileID: 0}
   isBouncing: 0
@@ -308,3 +309,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09905985, y: 0.04975088}
   m_EdgeRadius: 0
+--- !u!81 &6365277862065655929
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438852452099138578}
+  m_Enabled: 1
