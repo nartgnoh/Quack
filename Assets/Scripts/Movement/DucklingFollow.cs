@@ -30,7 +30,9 @@ public class DucklingFollow : DuckMovement
         bool isBouncing = follow && IsBouncing();
         bool isSwimming = IsSwimming();
 
-        Animate(moveDirection, isBouncing, isSwimming);
+        if(follow) {
+            Animate(moveDirection, isBouncing, isSwimming);
+        }
     }
 
     Vector2 GetMoveDirection()
