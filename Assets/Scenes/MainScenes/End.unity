@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 257213730}
   - component: {fileID: 257213733}
-  - component: {fileID: 257213732}
   - component: {fileID: 257213731}
   m_Layer: 0
   m_Name: duckling (1)
@@ -175,27 +174,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &257213732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257213729}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ca9889e4f34c4286a295c1aacaa90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rigidbody: {fileID: 0}
-  animator: {fileID: 0}
-  isBouncing: 0
-  followSpeed: 200
-  follow: 0
-  duckling: {fileID: 0}
-  soundRadius: 10
-  chirpSound: {fileID: 0}
 --- !u!212 &257213733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624185580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 260, y: -100, z: 0}
+  m_LocalPosition: {x: 260, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2023932121}
@@ -319,8 +297,8 @@ Camera:
   m_GameObject: {fileID: 631804213}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -363,7 +341,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1587790408}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -389,7 +368,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -409,7 +388,6 @@ GameObject:
   m_Component:
   - component: {fileID: 894832707}
   - component: {fileID: 894832706}
-  - component: {fileID: 894832708}
   - component: {fileID: 894832709}
   m_Layer: 0
   m_Name: duckling
@@ -484,27 +462,6 @@ Transform:
   m_Father: {fileID: 624185582}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &894832708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894832705}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ca9889e4f34c4286a295c1aacaa90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rigidbody: {fileID: 0}
-  animator: {fileID: 0}
-  isBouncing: 0
-  followSpeed: 200
-  follow: 0
-  duckling: {fileID: 0}
-  soundRadius: 10
-  chirpSound: {fileID: 0}
 --- !u!95 &894832709
 Animator:
   serializedVersion: 3
@@ -699,8 +656,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278240255
-  m_fontColor: {r: 1, g: 0.76470596, b: 0, a: 1}
+    rgba: 4288722876
+  m_fontColor: {r: 0.7372549, g: 0.7176471, b: 0.627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -833,6 +790,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1587790407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587790408}
+  - component: {fileID: 1587790409}
+  m_Layer: 0
+  m_Name: PostProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1587790408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587790407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631804216}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587790409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587790407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: e9438424df5d83643ac589d1e5b9e770, type: 2}
 --- !u!1 &1670166942
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1670166943}
   - component: {fileID: 1670166946}
-  - component: {fileID: 1670166945}
   - component: {fileID: 1670166944}
   m_Layer: 0
   m_Name: duckling (2)
@@ -885,27 +889,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1670166945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670166942}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ca9889e4f34c4286a295c1aacaa90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rigidbody: {fileID: 0}
-  animator: {fileID: 0}
-  isBouncing: 0
-  followSpeed: 200
-  follow: 0
-  duckling: {fileID: 0}
-  soundRadius: 10
-  chirpSound: {fileID: 0}
 --- !u!212 &1670166946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1103,7 +1086,6 @@ GameObject:
   - component: {fileID: 2023932121}
   - component: {fileID: 2023932120}
   - component: {fileID: 2023932123}
-  - component: {fileID: 2023932122}
   m_Layer: 0
   m_Name: birdie
   m_TagString: Untagged
@@ -1177,24 +1159,6 @@ Transform:
   m_Father: {fileID: 624185582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2023932122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023932119}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0637e158214a5d243b6533fe00338f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 250
-  rigidbody: {fileID: 0}
-  animator: {fileID: 0}
-  isBouncing: 0
-  quackRadius: 0
-  quackSound: {fileID: 2705388408840109933, guid: e6db1f9d7e4ccb24f913201edf386969, type: 3}
 --- !u!95 &2023932123
 Animator:
   serializedVersion: 3
@@ -1224,7 +1188,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2056549748}
   - component: {fileID: 2056549751}
-  - component: {fileID: 2056549750}
   - component: {fileID: 2056549749}
   m_Layer: 0
   m_Name: duckling (3)
@@ -1266,27 +1229,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2056549750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056549747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ca9889e4f34c4286a295c1aacaa90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rigidbody: {fileID: 0}
-  animator: {fileID: 0}
-  isBouncing: 0
-  followSpeed: 200
-  follow: 0
-  duckling: {fileID: 0}
-  soundRadius: 10
-  chirpSound: {fileID: 0}
 --- !u!212 &2056549751
 SpriteRenderer:
   m_ObjectHideFlags: 0
