@@ -13953,6 +13953,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2303728290905622875, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.b
+      value: 0.62824845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728290905622875, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.g
+      value: 0.71947503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728290905622875, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291369523390, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.b
+      value: 0.62824845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291369523390, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.g
+      value: 0.71947503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291369523390, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291677239981, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.b
+      value: 0.62824845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291677239981, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.g
+      value: 0.71947503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303728291677239981, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
+      propertyPath: m_Color.r
+      value: 0.735849
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fecd018c5ceef04ca6ec99d9fc8f732, type: 3}
 --- !u!224 &890743803 stripped
