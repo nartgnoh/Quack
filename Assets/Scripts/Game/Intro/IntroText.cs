@@ -22,8 +22,6 @@ public class IntroText : MonoBehaviour
 
         text.text = story[count];
         count++;
-        StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
-
         duckSound = duck.gameObject.GetComponent<AudioSource>();
     }
 
