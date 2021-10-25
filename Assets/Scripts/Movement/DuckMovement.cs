@@ -9,6 +9,8 @@ public abstract class DuckMovement : MonoBehaviour
     public Rigidbody2D rigidbody;
     public Animator animator;
 
+    public bool isBouncing;
+
     public void SuperStart()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -22,6 +24,7 @@ public abstract class DuckMovement : MonoBehaviour
 
     public void Animate(Vector2 moveDirection, bool isBouncing, bool isSwimming)
     {
+        this.isBouncing = isBouncing;
         if (moveDirection.magnitude > 0)
         {
             animator.SetBool("isWaddling", true);
@@ -40,7 +43,12 @@ public abstract class DuckMovement : MonoBehaviour
             animator.SetBool("isWaddling", false);
         }
 
-        animator.SetBool("isBouncing", isBouncing);
+        // if (isBouncing && !isSwimming)
+        // {
+        //     animator.Play("Base Layer.PlayerBounce", 0, 1f);
+        // }
+
+        animator.SetBool("isBouncing", isBouncing && !isSwimming);
 
         animator.SetBool("isSwimming", isSwimming);
     }
