@@ -49,7 +49,7 @@ public class LightningController : MonoBehaviour
     {
         lightning.SetActive(false);
 
-        float rand = Random.Range(5.5f, 20.5f);
+        float rand = Random.Range(9f, 24f);
         Invoke("callLightning", rand);
     }
 
