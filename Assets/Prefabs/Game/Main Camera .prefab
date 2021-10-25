@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 8da6c5b36329d43a39d61edf35c13da1cfeeb3a40000000067989a4f
+  m_ApplyToSortingLayers: 8da6c5b36329d43a39d61edf35c13da1cfeeb3a40000000067989a4f95858363
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -454,7 +454,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 338927ac8d7ff9248b48db6a26bf9e00, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 1
   Mute: 0

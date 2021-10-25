@@ -10,6 +10,7 @@ public class MusicController : MonoBehaviour
     void Start()
     {
         music.SetActive(true);
+        AudioListener.volume = 0.15f;
     }
 
     // Update is called once per frame
