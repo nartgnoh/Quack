@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : DuckMovement
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : DuckMovement
     public GameObject quackSound;
 
     private AudioSource audio;
+    private float duckCount;
 
     void Start()
     {
@@ -17,6 +19,10 @@ public class PlayerMovement : DuckMovement
     void Update()
     {
         GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        duckCount = PlayerPrefs.GetFloat("duckCount");
+        if (duckCount >= 9) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     void FixedUpdate()
