@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class DuckMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
+    private GameObject shadow;
 
     public Rigidbody2D rigidbody;
     public Animator animator;
@@ -15,6 +16,15 @@ public abstract class DuckMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Shadow")
+            {
+                shadow = child.gameObject;
+                break;
+            }
+        }
     }
 
     public void Move(Vector2 moveDirection)
@@ -43,10 +53,14 @@ public abstract class DuckMovement : MonoBehaviour
             animator.SetBool("isWaddling", false);
         }
 
-        // if (isBouncing && !isSwimming)
-        // {
-        //     animator.Play("Base Layer.PlayerBounce", 0, 1f);
-        // }
+        if (isSwimming)
+        {
+            shadow.SetActive(false);
+        }
+        else
+        {
+            shadow.SetActive(true);
+        }
 
         animator.SetBool("isBouncing", isBouncing && !isSwimming);
 
