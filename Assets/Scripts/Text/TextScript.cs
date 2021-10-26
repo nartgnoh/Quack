@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TextScript : MonoBehaviour
 {
@@ -25,9 +27,12 @@ public class TextScript : MonoBehaviour
                     this.GetComponent<UnityEngine.UI.Text>().text = string.Format("{0:00}:{1:00}", minutes, seconds);
                 }
                 else {
-                    this.GetComponent<UnityEngine.UI.Text>().text = "GAME OVER (LOAD SCENE)";
-                    // SceneManager.LoadScene("GameOver");
+                    SceneManager.LoadScene("End");
                 }
+                break;
+            case "EndDucklingsCollected":
+                duckCount = PlayerPrefs.GetFloat("duckCount");
+                this.GetComponent<UnityEngine.UI.Text>().text = "Total Ducklings: " + duckCount.ToString();
                 break;
         }
     }
