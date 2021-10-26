@@ -40,6 +40,6 @@ git@github.com:nartgnoh/Quack.git
 
 ## Acknowledgments
 Sound References:
-* [Still of Morning by Eric Matyas]
+* Still of Morning by Eric Matyas
 * [Duck Quack - Sound Effect (HD)](https://www.youtube.com/watch?v=aqCxlxclyzo)
 * [Cute Duckling Sounds](https://www.youtube.com/watch?v=9r6PS1tEEzs)
