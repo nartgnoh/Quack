@@ -16,7 +16,7 @@ public class TextScript : MonoBehaviour
         {
             case "DucklingsCollected":
                 duckCount = PlayerPrefs.GetFloat("duckCount");
-                this.GetComponent<UnityEngine.UI.Text>().text = duckCount.ToString();
+                this.GetComponent<UnityEngine.UI.Text>().text = duckCount.ToString() + "/9";
                 break;
             case "Timer":
                 if (timer > 0) {
@@ -27,15 +27,18 @@ public class TextScript : MonoBehaviour
                     this.GetComponent<UnityEngine.UI.Text>().text = string.Format("{0:00}:{1:00}", minutes, seconds);
                 }
                 else {
+                    this.GetComponent<UnityEngine.UI.Text>().text = string.Format("00:00");
                     SceneManager.LoadScene("End");
                 }
                 break;
-            case "EndDucklingsCollected":
+            case "DucksCollectedShadow":
                 duckCount = PlayerPrefs.GetFloat("duckCount");
-                this.GetComponent<UnityEngine.UI.Text>().text = "Total Ducklings: " + duckCount.ToString();
+                this.GetComponent<TMP_Text>().text = "Total Ducklings: " + duckCount.ToString() + "/9";
+                break;
+            case "DucksCollectedTitle":
+                duckCount = PlayerPrefs.GetFloat("duckCount");
+                this.GetComponent<TMP_Text>().text = "Total Ducklings: " + duckCount.ToString() + "/9";
                 break;
         }
     }
-
-
 }
