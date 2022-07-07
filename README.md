@@ -4,6 +4,8 @@ You're a cute duck looking for your ducklings.
 
 Find it here: https://cvu232.itch.io/quack
 
+<img src="https://img.itch.zone/aW1nLzcyODU3NzYucG5n/original/V30KI%2B.png" width="250" /> 
+
 ## Description
 
 Code-base for Quack! - A 2D platformer made using the Unity Engine.
