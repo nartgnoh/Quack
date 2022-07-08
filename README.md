@@ -8,9 +8,20 @@ Find it here: https://cvu232.itch.io/quack
 
 ## Description
 
+"Quack? Quack."
+There's a lot of balls of fluff today. Aww, look at how they all bounce around alongside you! Oh no! A storm's separated all of you... Can you round everyone back together in this cute little game?
+
 Code-base for Quack! - A 2D platformer made using the Unity Engine.
 
-Project 2 - DATT4300 (Fall 2021)
+### Controls:
+
+[WASD/Arrow Keys] - Move around
+
+[Spacebar] - Quack & include ducklings in your party
+
+### Gameplay:
+
+Run around the map to find your lost ducklings. Be careful not to exclude any of those precious balls of fluff. Sometimes the ducklings might get left behind if you go too far, so make sure to check up on them!
 
 ## Getting Started
 
